@@ -1,0 +1,11 @@
+# Pedir al usuario que ingrese una letra
+letra = input("Ingresa una letra del alfabeto: ").lower()
+
+# Verificar que sea una sola letra
+if len(letra) == 1 and letra.isalpha():
+    if letra in 'aeiou':
+        print("Es una vocal.")
+    else:
+        print("Es una consonante.")
+else:
+    print("Por favor, ingresa solo una letra válida.")
