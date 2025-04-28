@@ -1,0 +1,17 @@
+# Solicitamos al usuario que ingrese un número
+numero = int(input("Por favor, ingresa un número del 1 al 7: "))
+
+# Creamos un diccionario que relaciona cada número con un día de la semana
+dias_semana = {
+    1: "Lunes",
+    2: "Martes",
+    3: "Miércoles",
+    4: "Jueves",
+    5: "Viernes",
+    6: "Sábado",
+    7: "Domingo"
+}
+
+# Verificamos si el número está entre 1 y 7
+if numero in dias_semana:
+    print(f"El número {numero} corresponde a: {dias_semana[numero]}")
