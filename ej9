@@ -1,0 +1,6 @@
+# Pedimos al usuario que ingrese una palabra
+palabra = input("Ingrese una palabra: ")
+
+# Recorremos cada letra de la palabra usando un ciclo for
+for letra in palabra:
+    print(letra)
