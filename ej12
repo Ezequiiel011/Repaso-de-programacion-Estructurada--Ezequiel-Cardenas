@@ -1,0 +1,24 @@
+# Programa que cuenta cuántas veces aparece una letra en una cadena
+
+# Pedir al usuario que ingrese una cadena de texto
+cadena = input("Ingresa una cadena de texto: ")
+
+# Pedir al usuario que ingrese una letra
+letra = input("Ingresa la letra que deseas contar: ")
+
+# Validar que el usuario haya ingresado solo una letra
+while len(letra) != 1:
+    print("Por favor, ingresa solo una letra.")
+    letra = input("Ingresa la letra que deseas contar: ")
+
+# Contar las apariciones usando un ciclo while
+contador = 0
+indice = 0
+
+while indice < len(cadena):
+    if cadena[indice] == letra:
+        contador += 1
+    indice += 1
+
+# Mostrar el resultado
+print(f"La letra '{letra}' aparece {contador} veces en la cadena.")
