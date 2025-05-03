@@ -1,0 +1,15 @@
+# Programa que suma números positivos hasta que se ingresa un número negativo
+
+# Inicializar la suma
+suma = 0
+
+# Pedir el primer número
+numero = int(input("Ingresa un número entero positivo (o un número negativo para terminar): "))
+
+# Mientras el número sea positivo, continuar sumando
+while numero >= 0:
+    suma += numero
+    numero = int(input("Ingresa otro número entero positivo (o un número negativo para terminar): "))
+
+# Mostrar la suma total
+print(f"La suma de todos los números positivos ingresados es: {suma}")
