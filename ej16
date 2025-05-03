@@ -1,0 +1,10 @@
+# Programa para sumar todos los elementos de un arreglo
+
+# Leer el arreglo desde la entrada
+numeros = list(map(int, input("Ingresa los números separados por espacios: ").split()))
+
+# Calcular la suma
+suma_total = sum(numeros)
+
+# Mostrar el resultado
+print("La suma de todos los elementos es:", suma_total)
