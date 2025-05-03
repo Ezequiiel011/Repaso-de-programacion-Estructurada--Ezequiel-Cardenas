@@ -1,0 +1,13 @@
+# Inicializamos el producto en 1 (identidad multiplicativa)
+producto = 1
+
+# Pedimos el primer número al usuario
+numero = int(input("Ingresa un número entero positivo (o un número negativo para terminar): "))
+
+# Mientras el número sea positivo, seguimos multiplicando
+while numero >= 0:
+    producto *= numero
+    numero = int(input("Ingresa otro número entero positivo (o un número negativo para terminar): "))
+
+# Mostramos el resultado
+print("El producto de todos los números ingresados es:", producto)
