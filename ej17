@@ -1,0 +1,10 @@
+# Programa para encontrar el elemento máximo de un arreglo
+
+# Leer el arreglo desde la entrada
+numeros = list(map(int, input("Ingresa los números separados por espacios: ").split()))
+
+# Encontrar el máximo
+maximo = max(numeros)
+
+# Mostrar el resultado
+print("El número máximo del arreglo es:", maximo)
