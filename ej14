@@ -1,0 +1,16 @@
+import random
+
+meta = 100
+c1 = c2 = tiempo = 0
+
+while c1 < meta and c2 < meta:
+    c1 += random.randint(1, 10)
+    c2 += random.randint(1, 10)
+    tiempo += 1
+
+if c1 >= meta and c2 >= meta:
+    print(f"Empate en {tiempo} segundos.")
+elif c1 >= meta:
+    print(f"Corredor 1 ganó en {tiempo} segundos.")
+else:
+    print(f"Corredor 2 ganó en {tiempo} segundos.")
