@@ -1,0 +1,17 @@
+import random
+
+palabras = ["perro", "gato", "casa", "mesa", "libro"]
+palabra = random.choice(palabras)
+oculta = ["_" for _ in palabra]
+
+while "_" in oculta:
+    print(" ".join(oculta))
+    letra = input("Adivina una letra: ").lower()
+    if letra in palabra:
+        for i in range(len(palabra)):
+            if palabra[i] == letra:
+                oculta[i] = letra
+    else:
+        print("Letra incorrecta.")
+
+print("¡Ganaste! La palabra era:", palabra)
