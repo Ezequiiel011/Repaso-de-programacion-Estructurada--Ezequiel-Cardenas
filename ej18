@@ -1,0 +1,3 @@
+numeros = list(map(int, input("Ingresa los números separados por espacio: ").split()))
+promedio = sum(numeros) / len(numeros)
+print("La media de los elementos es:", promedio)
