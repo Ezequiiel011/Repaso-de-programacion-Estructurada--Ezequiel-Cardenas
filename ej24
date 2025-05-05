@@ -1,1 +1,47 @@
+import random
 
+# Arreglo de palabras
+palabras = ["sol", "estrella", "luz", "planeta", "universo", "galaxia", "cometa"]
+
+# Seleccionar una palabra al azar
+palabra = random.choice(palabras)
+
+# Convertir la palabra en una lista de caracteres
+letras_palabra = list(palabra)
+
+# Crear un arreglo de guiones bajos para mostrar el progreso del jugador
+progreso = [letras_palabra[0]] + ['_' for _ in letras_palabra[1:]]
+
+# Letras ya adivinadas
+letras_adivinadas = set(palabra[0])
+
+# Mostrar pista inicial
+print("¡Bienvenido al juego de adivinanzas!")
+print("Adivina la palabra letra por letra.")
+print("Pista: ", ''.join(progreso))
+
+# Bucle principal del juego
+while '_' in progreso:
+    letra = input("Ingresa una letra: ").lower()
+
+    if not letra.isalpha() or len(letra) != 1:
+        print("Debes ingresar solo UNA letra.")
+        continue
+
+    if letra in letras_adivinadas:
+        print("Ya ingresaste esa letra. Intenta otra.")
+        continue
+
+    letras_adivinadas.add(letra)
+
+    if letra in letras_palabra:
+        for i in range(1, len(letras_palabra)):
+            if letras_palabra[i] == letra:
+                progreso[i] = letra
+        print("¡Correcto! Progreso:", ''.join(progreso))
+    else:
+        print("Incorrecto. Esa letra no está.")
+        print("Progreso:", ''.join(progreso))
+
+# Mensaje final
+print("¡Felicidades! Adivinaste la palabra:", palabra)
