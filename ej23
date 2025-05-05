@@ -1,1 +1,14 @@
+import random
 
+palabras = ["12345", "34875", "98121", "23091", "45012"]
+palabra = random.choice(palabras)
+adivinada = ["_" for _ in palabra]
+adivinada[0] = palabra[0]
+
+while "_" in adivinada:
+    print(" ".join(adivinada))
+    letra = input("Adivina una letra: ").lower()
+    if letra in palabra:
+        for i in range(len(palabra)):
+            if palabra[i] == letra:
+                adivinada[i] = letra
