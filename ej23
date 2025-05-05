@@ -1,15 +1,1 @@
-import random
-import time
 
-numeros = [random.randint(1, 9) for _ in range(5)]
-print("Memoriza estos números:")
-print(numeros)
-time.sleep(3)
-print("\n" * 50)  # Borra pantalla simuladamente
-
-respuesta = list(map(int, input("Ingresa los números en el mismo orden: ").split()))
-
-if respuesta == numeros:
-    print("¡Correcto! Ganaste.")
-else:
-    print("Incorrecto. Perdiste. Los números eran:", numeros)
