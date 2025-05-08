@@ -1,0 +1,33 @@
+class Libro:
+    def __init__(self, titulo, autor, genero, paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.genero = genero
+        self.paginas = paginas
+
+    def get_titulo(self):
+        return self.titulo
+
+    def set_titulo(self, titulo):
+        self.titulo = titulo
+
+    def get_autor(self):
+        return self.autor
+
+    def set_autor(self, autor):
+        self.autor = autor
+
+    def get_genero(self):
+        return self.genero
+
+    def set_genero(self, genero):
+        self.genero = genero
+
+    def get_paginas(self):
+        return self.paginas
+
+    def set_paginas(self, paginas):
+        self.paginas = paginas
+
+    def es_ficcion(self):
+        return self.genero.lower() in ["ficción", "novela", "fantasía", "ciencia ficción"]
