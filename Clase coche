@@ -1,0 +1,9 @@
+class Coche:
+    def __init__(self, marca, modelo, anio_fabricacion):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio_fabricacion = anio_fabricacion
+
+    def obtener_antiguedad(self):
+        anio_actual = datetime.now().year
+        return anio_actual - self.anio_fabricacion
